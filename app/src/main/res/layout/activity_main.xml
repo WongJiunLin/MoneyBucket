@@ -10,30 +10,40 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_margin="5dp"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/llCurrentBalance"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_margin="5dp"
+                android:orientation="horizontal">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Current Balance ($): "
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tvCurrentBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="00000.00"
+                    android:textSize="25sp"
+                    android:textStyle="italic"/>
+            </LinearLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvBaskets"
                 android:layout_margin="10dp"
-                android:fontFamily="sans-serif-black"
-                android:text="Current Balance (SGD): "
-                android:textSize="20sp"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/tvCurrentBalance"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="8dp"
-                android:text="00000.00"
-                android:textSize="25sp"
-                android:textStyle="bold"/>
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
         </LinearLayout>
 
     </RelativeLayout>
@@ -48,7 +58,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintVertical_bias=".8"
         app:layout_constraintHorizontal_bias=".9"
-        android:src="@drawable/basket"
+        android:src="@drawable/icon_add_basket"
         app:cb_color="@color/yellow"
         app:cb_pressedRingWidth="13dip"/>
     

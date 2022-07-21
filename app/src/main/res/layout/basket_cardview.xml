@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="25dp"
+    app:cardUseCompatPadding="true"
+    android:elevation="20dp"
+    android:id="@+id/cvBasket">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/deep_orange">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:id="@+id/ivBasket"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="25dp"
+                android:src="@drawable/icon_money" />
+
+            <TextView
+                android:id="@+id/tvRemainingBanner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toRightOf="@+id/ivBasket"
+                android:fontFamily="sans-serif-black"
+                android:text="Current Remaining: "
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvBasketBalance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvRemainingBanner"
+                android:layout_marginLeft="20dp"
+                android:layout_toRightOf="@+id/ivBasket"
+                android:fontFamily="sans-serif"
+                android:text="0000.00"
+                android:textSize="20sp"
+                android:textStyle="italic" />
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/tvBasketName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginTop="15dp"
+            android:background="@color/dark_orange"
+            android:text="Basket Name"
+            android:textSize="25sp"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
